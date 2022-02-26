@@ -1,0 +1,40 @@
+.contaier{
+    display:flex;
+}
+
+.panel{
+    background-size:cover;
+    width:5vw;
+    background-position:center;
+    height:100vh;
+    border-radius:50px;
+    flex:0.5;
+    color:#fff;
+    cursor:pointer;
+    position:relative;
+    transition:flex 0.7s ease-in;
+}
+
+.panel h3{
+    position: absolute;
+    top:20px;
+    left:20px;
+    opacity:0;
+}
+.panel.active{
+    flex:5;
+}
+.panel.active h3{
+    opacity:1;
+    transition:ease-in 1.3s;
+}
+
+@media(max-width:480px){
+    .contaier{
+        width:100vw;
+    }
+    .panel:nth-of-type(6),.panel:nth-of-type(5){
+        display:none;
+    }
+}
+
